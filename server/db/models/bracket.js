@@ -12,43 +12,43 @@ var schema = new mongoose.Schema({
         type: String,
         enum: ['men', 'women']
     },
-    '100back': [{
+    back100: [{
         type: String
     }],
-    '200back': [{
+    back200: [{
         type: String
     }],
-    '100breast': [{
+    breast100: [{
         type: String
     }],
-    '200breast': [{
+    breast200: [{
         type: String
     }],
-    '100fly': [{
+    fly100: [{
         type: String
     }],
-    '200fly': [{
+    fly200: [{
         type: String
     }],
-    '50free': [{
+    free50: [{
         type: String
     }],
-    '100free': [{
+    free100: [{
         type: String
     }],
-    '200free': [{
+    free200: [{
         type: String
     }],
-    '400free': [{
+    free400: [{
         type: String
     }],
-    '1500free': [{
+    free1500: [{
         type: String
     }],
-    '200im': [{
+    im200: [{
         type: String
     }],
-    '400im': [{
+    im400: [{
         type: String
     }]
 });
