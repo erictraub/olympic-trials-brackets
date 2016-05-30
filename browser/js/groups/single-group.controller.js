@@ -3,7 +3,5 @@ app.controller('SingleGroupCtrl', function($scope, group, currentUser, $state, p
 	$scope.currentUser = currentUser;
 	$scope.predictions = predictions;
 
-	console.log('predictions', predictions)
-
 });
 

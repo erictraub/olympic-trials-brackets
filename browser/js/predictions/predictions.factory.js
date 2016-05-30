@@ -15,6 +15,13 @@ app.factory('PredictionFactory', function($http) {
 		});
 	};
 
+	PredictionFactory.getOne = function(groupId, userId) {
+		return $http.get('/api/predictions?group=' + groupId + '&owner=' + userId)
+		.then(function(prediction) {
+			return prediction.data;
+		});
+	};
+
 
 	return PredictionFactory;
 });

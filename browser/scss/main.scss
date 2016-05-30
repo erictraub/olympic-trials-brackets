@@ -19,6 +19,13 @@ html, body {
   margin: 0 auto;
 }
 
+td, th {
+	min-width: 100px;
+}
+
+.pr {
+	float: right;
+}
 
 
 @import 'directives/main';

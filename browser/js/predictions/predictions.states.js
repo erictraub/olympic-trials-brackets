@@ -9,6 +9,9 @@ app.config(function ($stateProvider) {
             },
             group: function($stateParams, GroupFactory) {
                 return GroupFactory.getById($stateParams.groupId);
+            },
+            prediction: function (PredictionFactory, $stateParams) {
+                return PredictionFactory.getOne($stateParams.groupId, $stateParams.userId);
             }
         }
     });

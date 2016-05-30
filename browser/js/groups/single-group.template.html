@@ -1,4 +1,4 @@
-<div class="col-md-8 col-md-offset-2">
+<div class="col-md-8 col-md-offset-2" style="overflow-x:auto;">
   <table class="table table-striped">
     <thead>
       <tr>
@@ -9,11 +9,11 @@
     <tbody>
       <tr>
         <th scope="row">100 Backstroke</th>
-        <td ng-repeat="prediction in predictions">1. {{ prediction.back100[0] }} - {{ prediction.back100[3] }}<br>2. {{ prediction.back100[1] }} - {{ prediction.back100[4] }}</td>
+        <td ng-repeat="prediction in predictions">1. {{ prediction.back100[0] }}<span class="pr">{{ prediction.back100[2] }}</span><br>2. {{ prediction.back100[1] }}<span class="pr">{{ prediction.back100[3] }}</span></td>
       </tr>
       <tr>
         <th scope="column">200 Backstroke</th>
-        <td ng-repeat="prediction in predictions">1. {{ prediction.back200[0] }}<br>2. {{ prediction.back200[1] }}</td>
+        <td ng-repeat="prediction in predictions"><span ng-show="prediction.back200[0]">1. {{ prediction.back200[0] }} - {{ prediction.back200[2] }}</span><br>2. {{ prediction.back200[1] }} - {{ prediction.back200[3] }}</td>
       </tr>
       <tr>
         <th scope="column">100 Breaststroke</th>
