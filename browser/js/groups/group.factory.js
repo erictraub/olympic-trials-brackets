@@ -47,6 +47,13 @@ app.factory('GroupFactory', function($http) {
 		});
 	};
 
+	GroupFactory.fetchAllForUser = function(memberId) {
+		return $http.get('/api/groups' + '?members=' + memberId)
+		.then(function(groups) {
+			return groups.data;
+		});
+	};
+
 
 	return GroupFactory;
 });

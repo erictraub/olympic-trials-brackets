@@ -4,8 +4,14 @@ app.config(function ($stateProvider) {
         templateUrl: 'js/groups/single-group.template.html',
         controller: 'SingleGroupCtrl',
         resolve: {
+            currentUser: function(AuthService) {
+                return AuthService.getLoggedInUser();
+            },
             group: function($stateParams, GroupFactory) {
                 return GroupFactory.getById($stateParams.groupId);
+            },
+            predictions: function(PredictionFactory, $stateParams) {
+                return PredictionFactory.fetchAllForGroup($stateParams.groupId);
             }
         }
     });
@@ -19,6 +25,9 @@ app.config(function ($stateProvider) {
         resolve: {
             currentUser: function(AuthService) {
                 return AuthService.getLoggedInUser();
+            },
+            groups: function(GroupFactory, currentUser) {
+                return GroupFactory.fetchAllForUser(currentUser._id);
             }
         }
     });

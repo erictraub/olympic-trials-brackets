@@ -4,7 +4,7 @@ module.exports = router;
 
 router.use('/members', require('./members'));
 router.use('/users', require('./users'));
-router.use('/brackets', require('./brackets'));
+router.use('/predictions', require('./predictions'));
 router.use('/groups', require('./groups'));
 
 // Make sure this is after all of

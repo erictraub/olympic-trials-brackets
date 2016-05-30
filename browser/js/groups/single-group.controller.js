@@ -1,10 +1,9 @@
-app.controller('SingleGroupCtrl', function($scope, group) {
+app.controller('SingleGroupCtrl', function($scope, group, currentUser, $state, predictions) {
 	$scope.group = group;
+	$scope.currentUser = currentUser;
+	$scope.predictions = predictions;
 
-    $scope.items = [];
-    for (var i = 0; i < 1000; i++) {
-      $scope.items.push(i);
-    }
+	console.log('predictions', predictions)
 
 });
 

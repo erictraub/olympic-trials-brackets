@@ -12,6 +12,10 @@ var schema = new mongoose.Schema({
         type: String,
         enum: ['men', 'women']
     },
+    group: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Group'
+    },
     back100: [{
         type: String
     }],
@@ -53,4 +57,4 @@ var schema = new mongoose.Schema({
     }]
 });
 
-mongoose.model('Bracket', schema);
+mongoose.model('Prediction', schema);

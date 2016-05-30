@@ -1,27 +1,75 @@
-<div class="col-md-8 col-md-offset-2" style="overflow:scroll;">
-  <table class="table">
+<div class="col-md-8 col-md-offset-2">
+  <table class="table table-striped">
     <thead>
       <tr>
-        <th>Events</th>
-        <th ng-repeat="member in group.members">{{ member.username }}</th>
+        <th>Event</th>
+        <th ng-repeat="prediction in predictions">{{ prediction.owner.username }}</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <th scope="row">100 Backstroke</th>
-        <td>Mark</td>
+        <td ng-repeat="prediction in predictions">1. {{ prediction.back100[0] }} - {{ prediction.back100[3] }}<br>2. {{ prediction.back100[1] }} - {{ prediction.back100[4] }}</td>
       </tr>
       <tr>
-        <th scope="row">200 Breaststroke</th>
-        <td>Jacob</td>
+        <th scope="column">200 Backstroke</th>
+        <td ng-repeat="prediction in predictions">1. {{ prediction.back200[0] }}<br>2. {{ prediction.back200[1] }}</td>
       </tr>
       <tr>
-        <th scope="row">50 Freestyle</th>
-        <td>Larry</td>
+        <th scope="column">100 Breaststroke</th>
+        <td ng-repeat="prediction in predictions">{{ prediction.back200[0] }}</td>
+      </tr>
+      <tr>
+        <th scope="column">200 Breaststroke</th>
+        <td ng-repeat="prediction in predictions">{{ prediction.back200[0] }}</td>
+      </tr>
+      <tr>
+        <th scope="column">100 Butterfly</th>
+        <td ng-repeat="prediction in predictions">{{ prediction.back200[0] }}</td>
+      </tr>
+      <tr>
+        <th scope="column">200 Butterfly</th>
+        <td ng-repeat="prediction in predictions">{{ prediction.back200[0] }}</td>
+      </tr>
+      <tr>
+        <th scope="column">50 Freestyle</th>
+        <td ng-repeat="prediction in predictions">{{ prediction.back200[0] }}</td>
+      </tr>
+      <tr>
+        <th scope="column">100 Freestyle</th>
+        <td ng-repeat="prediction in predictions">{{ prediction.back200[0] }}</td>
+      </tr>
+      <tr>
+        <th scope="column">200 Freestyle</th>
+        <td ng-repeat="prediction in predictions">{{ prediction.back200[0] }}</td>
+      </tr>
+      <tr>
+        <th scope="column">400 Freestyle</th>
+        <td ng-repeat="prediction in predictions">{{ prediction.back200[0] }}</td>
+      </tr>
+      <tr>
+        <th scope="column">1500 Freestyle</th>
+        <td ng-repeat="prediction in predictions">{{ prediction.back200[0] }}</td>
+      </tr>
+      <tr>
+        <th scope="column">200 Individual Medly</th>
+        <td ng-repeat="prediction in predictions">{{ prediction.back200[0] }}</td>
+      </tr>
+      <tr>
+        <th scope="column">400 Individual Medly</th>
+        <td ng-repeat="prediction in predictions">{{ prediction.back200[0] }}</td>
       </tr>
     </tbody>
   </table>
 </div>
+
+<div class="col-md-6 col-md-offset-3" style="text-align:center;">
+  <button type="button" class="btn btn-primary" ng-click="editBracket()">Edit My Predictions</button>
+  <button type="button" class="btn btn-primary" ui-sref="createPredictions({ groupId: group._id, userId: currentUser._id })">Create Predictions</button>
+</div>
+
+
+
 
 
 

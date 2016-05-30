@@ -10,6 +10,7 @@ module.exports = router;
 
 router.get('/', function(req, res, next){
 	Group.find(req.query)
+	.populate('creator')
 	.then(function(groups){
 		res.status(200).send(groups);
 	})
