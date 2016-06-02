@@ -3,7 +3,11 @@
 }
 
 html, body {
-	background: #236B8E;
+	background: #F7F7F7;
+}
+
+body {
+  overflow-x: hidden;
 }
 
 @mixin clearfix {
@@ -20,12 +24,39 @@ html, body {
 }
 
 td, th {
-	min-width: 100px;
+	
 }
 
 .pr {
 	float: right;
 }
+
+.h57 {
+  height: 57px !important;
+  min-width: 200px;
+}
+
+.h137 {
+  height: 137px !important;
+  min-width: 200px;
+}
+
+.h57, .h137, .ctr {
+  text-align: center;
+}
+
+.shadow2, .shadow1 {
+  box-shadow: 10px 10px 20px 4px rgba(0,0,0,0.68);
+}
+
+::-webkit-scrollbar { 
+    display: none; 
+}
+
+.mgnBtm {
+  margin-bottom: 7px !important;
+}
+ 
 
 
 @import 'directives/main';

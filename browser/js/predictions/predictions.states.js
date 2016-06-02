@@ -1,5 +1,6 @@
 app.config(function ($stateProvider) {
     $stateProvider.state('createPredictions', {
+        cache: false,
         url: '/createPredictions/:groupId/:userId',
         templateUrl: 'js/predictions/create-predictions.template.html',
         controller: 'CreatePredictionsCtrl',
