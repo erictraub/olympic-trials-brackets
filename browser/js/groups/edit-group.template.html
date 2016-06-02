@@ -9,7 +9,7 @@
 <div class="row">
 	<div class="col-md-2"></div>
 
-	<div class="col-md-4">
+	<div class="col-md-4" style="text-align:center;">
 		<h3>Add Members to Group</h3>
 		<form name="addUser">
 		    <div class="form-group">
@@ -17,9 +17,32 @@
 		    </div>
 		    <button type="submit" class="btn btn-default" ng-click="addUserToGroup()">Add Member</button>
 		</form>
+
+
+		<!-- ALERTS -->
+	    <div class="row" style="margin-top:20px;" ng-show="userNotFound">
+		    <div class='col-md-10 col-md-offset-1' id="alt1" style="text-align:center;">
+		    	<h4>User not found !</h4>
+		    	<p>Make sure you spelled the email correctly</p>
+		    	<p><strong>and</strong> the user has already set up an account</p>
+		    </div>
+	    </div>
+	    <div class="row" style="margin-top:20px;" ng-show="memberAlreadyPresent">
+		    <div class='col-md-8 col-md-offset-2' id="alt2" style="text-align:center;">
+		    	<h4>Member already in group</h4>
+		    </div>
+	    </div>
+	    <div class="row" style="margin-top:20px;" ng-show="memberAdded">
+		    <div class='col-md-6 col-md-offset-3' id="alt3" style="text-align:center;">
+		    	<h4>Member added !</h4>
+		    </div>
+	    </div>
+
+
+
 	</div>
 
-	<div class="col-md-4">
+	<div class="col-md-4 rnd">
 		<h3>Current Members</h3>
 		<table class='table table-striped shadow2' ng-show="true">
 		  <thead>
