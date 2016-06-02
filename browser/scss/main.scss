@@ -3,8 +3,7 @@
 }
 
 html, body {
-	background-image: url("/assets/water1.jpeg");
-  background-size: 100%;
+  background-color: #BAC9DF;
 }
 
 body {
@@ -121,7 +120,12 @@ table {
   background-color: #A7A8A9;
   box-shadow: 0px 0px 0px 0px rgba(0,0,0,0);
 }
- 
+
+ul {
+  list-style-type: none;
+} 
+
+
 
 
 @import 'directives/main';
