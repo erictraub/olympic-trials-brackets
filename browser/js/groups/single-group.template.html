@@ -4,56 +4,64 @@
   </div>
 </div>  
 
-
-
 <div class="row">
+  <div class="col-md-6 col-md-offset-3" style="text-align:center;">
+    <button type="button" class="btn btn-primary" ng-click="showMenBracket()">Men's Bracket</button>
+    <button type="button" class="btn btn-primary" ng-click="showWomenBracket()">Women's Bracket</button>
+  </div>
+</div>
+
+
+
+<!-- MEN BRACKET -->
+<div class="row" ng-show="showMen">
   <div class="col-md-1 col-xs-0"></div>
   <div class="col-md-2 col-xs-2">
     <table class="table table-striped shadow1">
       <thead>
         <tr>
-          <th class="headcol ctr h57">EVENT</th>
+          <th class="headcol ctr wless57">EVENT</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <th scope="row" class="headcol h57">100 Backstroke</th>
+          <th scope="row" class="headcol wless57">100 Backstroke</th>
         </tr>
         <tr>
-          <th scope="row" class="headcol h57">200 Backstroke</th>
+          <th scope="row" class="headcol wless57">200 Backstroke</th>
         </tr>
         <tr>
-          <th scope="row" class="headcol h57">100 Breaststroke</th>
+          <th scope="row" class="headcol wless57">100 Breaststroke</th>
         </tr>
         <tr>
-          <th scope="row" class="headcol h57">200 Breaststroke</th>
+          <th scope="row" class="headcol wless57">200 Breaststroke</th>
         </tr>
         <tr>
-          <th scope="row" class="headcol h57">100 Butterfly</th>
+          <th scope="row" class="headcol wless57">100 Butterfly</th>
         </tr>
         <tr>
-          <th scope="row" class="headcol h57">200 Butterfly</th>
+          <th scope="row" class="headcol wless57">200 Butterfly</th>
         </tr>
         <tr>
-          <th scope="row" class="headcol h57">50 Freestyle</th>
+          <th scope="row" class="headcol wless57">50 Freestyle</th>
         </tr>
         <tr>
-          <th scope="row" class="headcol h137">100 Freestyle</th>
+          <th scope="row" class="headcol wless137">100 Freestyle</th>
         </tr>
         <tr>
-          <th scope="row" class="headcol h137">200 Freestyle</th>
+          <th scope="row" class="headcol wless137">200 Freestyle</th>
         </tr>
         <tr>
-          <th scope="row" class="headcol h57">400 Freestyle</th>
+          <th scope="row" class="headcol wless57">400 Freestyle</th>
         </tr>
         <tr>
-          <th scope="row" class="headcol h57">1500 Freestyle</th>
+          <th scope="row" class="headcol wless57">1500 Freestyle</th>
         </tr>
         <tr>
-          <th scope="row" class="headcol h57">200 Individual Medly</th>
+          <th scope="row" class="headcol wless57">200 Individual Medly</th>
         </tr>
         <tr>
-          <th scope="row" class="headcol h57">400 Individual Medly</th>
+          <th scope="row" class="headcol wless57">400 Individual Medly</th>
         </tr>
       </tbody>
     </table>
@@ -72,121 +80,121 @@
         <tr>
           <!-- <th scope="row" class="headcol h57">100 Backstroke</th> -->
           <td ng-repeat="prediction in predictions" class="h57">
-            <span ng-show="prediction.back100[0]"><strong>{{ prediction.back100[0] }}</strong> : {{ prediction.back100[2] }}</span>
+            <span ng-show="prediction.back100[0]"><strong>{{ prediction.back100[0] }}</strong><span class="pr">{{ prediction.back100[2] }}</span></span>
               <br>
-            <span ng-show="prediction.back100[1]"><strong>{{ prediction.back100[1] }}</strong> : {{ prediction.back100[3] }}</span>
+            <span ng-show="prediction.back100[1]"><strong>{{ prediction.back100[1] }}</strong><span class="pr">{{ prediction.back100[3] }}</span></span>
           </td>
         </tr>
         <tr>
           <!-- <th scope="row" class="headcol h57">200 Backstroke</th> -->
           <td ng-repeat="prediction in predictions" class="h57">
-            <span ng-show="prediction.back200[0]"><strong>{{ prediction.back200[0] }}</strong> : {{ prediction.back200[2] }}</span>
+            <span ng-show="prediction.back200[0]"><strong>{{ prediction.back200[0] }}</strong><span class="pr">{{ prediction.back200[2] }}</span></span>
               <br>
-            <span ng-show="prediction.back200[1]"><strong>{{ prediction.back200[1] }}</strong> : {{ prediction.back200[3] }}</span>
+            <span ng-show="prediction.back200[1]"><strong>{{ prediction.back200[1] }}</strong><span class="pr">{{ prediction.back200[3] }}</span></span>
           </td>
         </tr>
         <tr>
           <!-- <th scope="row" class="headcol h57">100 Breaststroke</th> -->
           <td ng-repeat="prediction in predictions" class="h57">
-            <span ng-show="prediction.breast100[0]"><strong>{{ prediction.breast100[0] }}</strong> : {{ prediction.breast100[2] }}</span>
+            <span ng-show="prediction.breast100[0]"><strong>{{ prediction.breast100[0] }}</strong><span class="pr">{{ prediction.breast100[2] }}</span></span>
               <br>
-            <span ng-show="prediction.breast100[1]"><strong>{{ prediction.breast100[1] }}</strong> : {{ prediction.breast100[3] }}</span>
+            <span ng-show="prediction.breast100[1]"><strong>{{ prediction.breast100[1] }}</strong><span class="pr">{{ prediction.breast100[3] }}</span></span>
           </td>
         </tr>
         <tr>
           <!-- <th scope="row" class="headcol h57">200 Breaststroke</th> -->
           <td ng-repeat="prediction in predictions" class="h57">
-            <span ng-show="prediction.breast200[0]"><strong>{{ prediction.breast200[0] }}</strong> : {{ prediction.breast200[2] }}</span>
+            <span ng-show="prediction.breast200[0]"><strong>{{ prediction.breast200[0] }}</strong><span class="pr">{{ prediction.breast200[2] }}</span></span>
               <br>
-            <span ng-show="prediction.breast200[1]"><strong>{{ prediction.breast200[1] }}</strong> : {{ prediction.breast200[3] }}</span>
+            <span ng-show="prediction.breast200[1]"><strong>{{ prediction.breast200[1] }}</strong><span class="pr">{{ prediction.breast200[3] }}</span></span>
           </td>
         </tr>
         <tr>
           <!-- <th scope="row" class="headcol h57">100 Butterfly</th> -->
           <td ng-repeat="prediction in predictions" class="h57">
-            <span ng-show="prediction.fly100[0]"><strong>{{ prediction.fly100[0] }}</strong> : {{ prediction.fly100[2] }}</span>
+            <span ng-show="prediction.fly100[0]"><strong>{{ prediction.fly100[0] }}</strong><span class="pr">{{ prediction.fly100[2] }}</span></span>
               <br>
-            <span ng-show="prediction.fly100[1]"><strong>{{ prediction.fly100[1] }}</strong> : {{ prediction.fly100[3] }}</span>
+            <span ng-show="prediction.fly100[1]"><strong>{{ prediction.fly100[1] }}</strong><span class="pr">{{ prediction.fly100[3] }}</span></span>
           </td>
         </tr>
         <tr>
           <!-- <th scope="row" class="headcol h57">200 Butterfly</th> -->
           <td ng-repeat="prediction in predictions" class="h57">
-            <span ng-show="prediction.fly200[0]"><strong>{{ prediction.fly200[0] }}</strong> : {{ prediction.fly200[2] }}</span>
+            <span ng-show="prediction.fly200[0]"><strong>{{ prediction.fly200[0] }}</strong><span class="pr">{{ prediction.fly200[2] }}</span></span>
               <br>
-            <span ng-show="prediction.fly200[1]"><strong>{{ prediction.fly200[1] }}</strong> : {{ prediction.fly200[3] }}</span>
+            <span ng-show="prediction.fly200[1]"><strong>{{ prediction.fly200[1] }}</strong><span class="pr">{{ prediction.fly200[3] }}</span></span>
           </td>
         </tr>
         <tr>
           <!-- <th scope="row" class="headcol h57">50 Freestyle</th> -->
           <td ng-repeat="prediction in predictions" class="h57">
-            <span ng-show="prediction.free50[0]"><strong>{{ prediction.free50[0] }}</strong> : {{ prediction.free50[2] }}</span>
+            <span ng-show="prediction.free50[0]"><strong>{{ prediction.free50[0] }}</strong><span class="pr">{{ prediction.free50[2] }}</span></span>
               <br>
-            <span ng-show="prediction.free50[1]"><strong>{{ prediction.free50[1] }}</strong> : {{ prediction.free50[3] }}</span>
+            <span ng-show="prediction.free50[1]"><strong>{{ prediction.free50[1] }}</strong><span class="pr">{{ prediction.free50[3] }}</span></span>
           </td>
         </tr>
         <tr>
           <!-- <th scope="row" class="headcol h137">100 Freestyle</th> -->
           <td ng-repeat="prediction in predictions" class="h137">
-            <span ng-show="prediction.free100[0]"><strong>{{ prediction.free100[0] }}</strong> : {{ prediction.free100[6] }}</span>
+            <span ng-show="prediction.free100[0]"><strong>{{ prediction.free100[0] }}</strong><span class="pr">{{ prediction.free100[6] }}</span></span>
               <br>
-            <span ng-show="prediction.free100[1]"><strong>{{ prediction.free100[1] }}</strong> : {{ prediction.free100[7] }}</span>
+            <span ng-show="prediction.free100[1]"><strong>{{ prediction.free100[1] }}</strong><span class="pr">{{ prediction.free100[7] }}</span></span>
               <br>
-            <span ng-show="prediction.free100[2]"><strong>{{ prediction.free100[2] }}</strong> : {{ prediction.free100[8] }}</span>
+            <span ng-show="prediction.free100[2]"><strong>{{ prediction.free100[2] }}</strong><span class="pr">{{ prediction.free100[8] }}</span></span>
               <br>
-            <span ng-show="prediction.free100[3]"><strong>{{ prediction.free100[3] }}</strong> : {{ prediction.free100[9] }}</span>
+            <span ng-show="prediction.free100[3]"><strong>{{ prediction.free100[3] }}</strong><span class="pr">{{ prediction.free100[9] }}</span></span>
               <br>
-            <span ng-show="prediction.free100[4]"><strong>{{ prediction.free100[4] }}</strong> : {{ prediction.free100[10] }}</span>
+            <span ng-show="prediction.free100[4]"><strong>{{ prediction.free100[4] }}</strong><span class="pr">{{ prediction.free100[10] }}</span></span>
               <br>
-            <span ng-show="prediction.free100[5]"><strong>{{ prediction.free100[5] }}</strong> : {{ prediction.free100[11] }}</span>
+            <span ng-show="prediction.free100[5]"><strong>{{ prediction.free100[5] }}</strong><span class="pr">{{ prediction.free100[11] }}</span></span>
           </td>
         </tr>
         <tr>
           <!-- <th scope="row" class="headcol h137">200 Freestyle</th> -->
           <td ng-repeat="prediction in predictions" class="h137">
-            <span ng-show="prediction.free200[0]"><strong>{{ prediction.free200[0] }}</strong> : {{ prediction.free200[6] }}</span>
+            <span ng-show="prediction.free200[0]"><strong>{{ prediction.free200[0] }}</strong><span class="pr">{{ prediction.free200[6] }}</span></span>
               <br>
-            <span ng-show="prediction.free200[1]"><strong>{{ prediction.free200[1] }}</strong> : {{ prediction.free200[7] }}</span>
+            <span ng-show="prediction.free200[1]"><strong>{{ prediction.free200[1] }}</strong><span class="pr">{{ prediction.free200[7] }}</span></span>
               <br>
-            <span ng-show="prediction.free200[2]"><strong>{{ prediction.free200[2] }}</strong> : {{ prediction.free200[8] }}</span>
+            <span ng-show="prediction.free200[2]"><strong>{{ prediction.free200[2] }}</strong><span class="pr">{{ prediction.free200[8] }}</span></span>
               <br>
-            <span ng-show="prediction.free200[3]"><strong>{{ prediction.free200[3] }}</strong> : {{ prediction.free200[9] }}</span>
+            <span ng-show="prediction.free200[3]"><strong>{{ prediction.free200[3] }}</strong><span class="pr">{{ prediction.free200[9] }}</span></span>
               <br>
-            <span ng-show="prediction.free200[4]"><strong>{{ prediction.free200[4] }}</strong> : {{ prediction.free200[10] }}</span>
+            <span ng-show="prediction.free200[4]"><strong>{{ prediction.free200[4] }}</strong><span class="pr">{{ prediction.free200[10] }}</span></span>
               <br>
-            <span ng-show="prediction.free200[5]"><strong>{{ prediction.free200[5] }}</strong> : {{ prediction.free200[11] }}</span>
+            <span ng-show="prediction.free200[5]"><strong>{{ prediction.free200[5] }}</strong><span class="pr">{{ prediction.free200[11] }}</span></span>
           </td>
         </tr>
         <tr>
           <!-- <th scope="row" class="headcol h57">400 Freestyle</th> -->
           <td ng-repeat="prediction in predictions" class="h57">
-            <span ng-show="prediction.free400[0]"><strong>{{ prediction.free400[0] }}</strong> : {{ prediction.free400[2] }}</span>
+            <span ng-show="prediction.free400[0]"><strong>{{ prediction.free400[0] }}</strong><span class="pr">{{ prediction.free400[2] }}</span></span>
               <br>
-            <span ng-show="prediction.free400[1]"><strong>{{ prediction.free400[1] }}</strong> : {{ prediction.free400[3] }}</span>
+            <span ng-show="prediction.free400[1]"><strong>{{ prediction.free400[1] }}</strong><span class="pr">{{ prediction.free400[3] }}</span></span>
           </td>
         </tr>
         <tr>
           <!-- <th scope="row" class="headcol h57">1500 Freestyle</th> -->
           <td ng-repeat="prediction in predictions" class="h57">
-            <span ng-show="prediction.free1500[0]"><strong>{{ prediction.free1500[0] }}</strong> : {{ prediction.free1500[2] }}</span>
+            <span ng-show="prediction.free1500[0]"><strong>{{ prediction.free1500[0] }}</strong><span class="pr">{{ prediction.free1500[2] }}</span></span>
               <br>
-            <span ng-show="prediction.free1500[1]"><strong>{{ prediction.free1500[1] }}</strong> : {{ prediction.free1500[3] }}</span>
+            <span ng-show="prediction.free1500[1]"><strong>{{ prediction.free1500[1] }}</strong><span class="pr">{{ prediction.free1500[3] }}</span></span>
           </td>
         </tr>
         <tr>
           <!-- <th scope="row" class="headcol h57">200 Individual Medly</th> -->
           <td ng-repeat="prediction in predictions" class="h57">
-            <span ng-show="prediction.im200[0]"><strong>{{ prediction.im200[0] }}</strong> : {{ prediction.im200[2] }}</span>
+            <span ng-show="prediction.im200[0]"><strong>{{ prediction.im200[0] }}</strong><span class="pr">{{ prediction.im200[2] }}</span></span>
               <br>
-            <span ng-show="prediction.im200[1]"><strong>{{ prediction.im200[1] }}</strong> : {{ prediction.im200[3] }}</span>
+            <span ng-show="prediction.im200[1]"><strong>{{ prediction.im200[1] }}</strong><span class="pr">{{ prediction.im200[3] }}</span></span>
           </td>
         </tr>
         <tr>
           <!-- <th scope="row" class="headcol h57">400 Individual Medly</th> -->
           <td ng-repeat="prediction in predictions" class="h57">
-            <span ng-show="prediction.im400[0]"><strong>{{ prediction.im400[0] }}</strong> : {{ prediction.im400[2] }}</span>
+            <span ng-show="prediction.im400[0]"><strong>{{ prediction.im400[0] }}</strong><span class="pr">{{ prediction.im400[2] }}</span></span>
               <br>
-            <span ng-show="prediction.im400[1]"><strong>{{ prediction.im400[1] }}</strong> : {{ prediction.im400[3] }}</span>
+            <span ng-show="prediction.im400[1]"><strong>{{ prediction.im400[1] }}</strong><span class="pr">{{ prediction.im400[3] }}</span></span>
           </td>
         </tr>
       </tbody>
@@ -195,140 +203,205 @@
 </div>
 
 
+
+<div class="row" ng-show="showWomen">
+  <div class="col-md-1 col-xs-0"></div>
+  <div class="col-md-2 col-xs-2">
+    <table class="table table-striped shadow1">
+      <thead>
+        <tr>
+          <th class="headcol ctr wless57">EVENT</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row" class="headcol wless57">100 Backstroke</th>
+        </tr>
+        <tr>
+          <th scope="row" class="headcol wless57">200 Backstroke</th>
+        </tr>
+        <tr>
+          <th scope="row" class="headcol wless57">100 Breaststroke</th>
+        </tr>
+        <tr>
+          <th scope="row" class="headcol wless57">200 Breaststroke</th>
+        </tr>
+        <tr>
+          <th scope="row" class="headcol wless57">100 Butterfly</th>
+        </tr>
+        <tr>
+          <th scope="row" class="headcol wless57">200 Butterfly</th>
+        </tr>
+        <tr>
+          <th scope="row" class="headcol wless57">50 Freestyle</th>
+        </tr>
+        <tr>
+          <th scope="row" class="headcol wless137">100 Freestyle</th>
+        </tr>
+        <tr>
+          <th scope="row" class="headcol wless137">200 Freestyle</th>
+        </tr>
+        <tr>
+          <th scope="row" class="headcol wless57">400 Freestyle</th>
+        </tr>
+        <tr>
+          <th scope="row" class="headcol wless57">800 Freestyle</th>
+        </tr>
+        <tr>
+          <th scope="row" class="headcol wless57">200 Individual Medly</th>
+        </tr>
+        <tr>
+          <th scope="row" class="headcol wless57">400 Individual Medly</th>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+
+  <div class="col-md-8 col-xs-10 shadow2" style="overflow-x:auto;">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <!-- <th class="headcol">Event</th> -->
+          <th ng-repeat="prediction in predictions" class="ctr h57">{{ prediction.owner.username | uppercase }}</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <!-- <th scope="row" class="headcol h57">100 Backstroke</th> -->
+          <td ng-repeat="prediction in predictions" class="h57">
+            <span ng-show="prediction.back100[0]"><strong>{{ prediction.back100[0] }}</strong><span class="pr">{{ prediction.back100[2] }}</span></span>
+              <br>
+            <span ng-show="prediction.back100[1]"><strong>{{ prediction.back100[1] }}</strong><span class="pr">{{ prediction.back100[3] }}</span></span>
+          </td>
+        </tr>
+        <tr>
+          <!-- <th scope="row" class="headcol h57">200 Backstroke</th> -->
+          <td ng-repeat="prediction in predictions" class="h57">
+            <span ng-show="prediction.back200[0]"><strong>{{ prediction.back200[0] }}</strong><span class="pr">{{ prediction.back200[2] }}</span></span>
+              <br>
+            <span ng-show="prediction.back200[1]"><strong>{{ prediction.back200[1] }}</strong><span class="pr">{{ prediction.back200[3] }}</span></span>
+          </td>
+        </tr>
+        <tr>
+          <!-- <th scope="row" class="headcol h57">100 Breaststroke</th> -->
+          <td ng-repeat="prediction in predictions" class="h57">
+            <span ng-show="prediction.breast100[0]"><strong>{{ prediction.breast100[0] }}</strong><span class="pr">{{ prediction.breast100[2] }}</span></span>
+              <br>
+            <span ng-show="prediction.breast100[1]"><strong>{{ prediction.breast100[1] }}</strong><span class="pr">{{ prediction.breast100[3] }}</span></span>
+          </td>
+        </tr>
+        <tr>
+          <!-- <th scope="row" class="headcol h57">200 Breaststroke</th> -->
+          <td ng-repeat="prediction in predictions" class="h57">
+            <span ng-show="prediction.breast200[0]"><strong>{{ prediction.breast200[0] }}</strong><span class="pr">{{ prediction.breast200[2] }}</span></span>
+              <br>
+            <span ng-show="prediction.breast200[1]"><strong>{{ prediction.breast200[1] }}</strong><span class="pr">{{ prediction.breast200[3] }}</span></span>
+          </td>
+        </tr>
+        <tr>
+          <!-- <th scope="row" class="headcol h57">100 Butterfly</th> -->
+          <td ng-repeat="prediction in predictions" class="h57">
+            <span ng-show="prediction.fly100[0]"><strong>{{ prediction.fly100[0] }}</strong><span class="pr">{{ prediction.fly100[2] }}</span></span>
+              <br>
+            <span ng-show="prediction.fly100[1]"><strong>{{ prediction.fly100[1] }}</strong><span class="pr">{{ prediction.fly100[3] }}</span></span>
+          </td>
+        </tr>
+        <tr>
+          <!-- <th scope="row" class="headcol h57">200 Butterfly</th> -->
+          <td ng-repeat="prediction in predictions" class="h57">
+            <span ng-show="prediction.fly200[0]"><strong>{{ prediction.fly200[0] }}</strong><span class="pr">{{ prediction.fly200[2] }}</span></span>
+              <br>
+            <span ng-show="prediction.fly200[1]"><strong>{{ prediction.fly200[1] }}</strong><span class="pr">{{ prediction.fly200[3] }}</span></span>
+          </td>
+        </tr>
+        <tr>
+          <!-- <th scope="row" class="headcol h57">50 Freestyle</th> -->
+          <td ng-repeat="prediction in predictions" class="h57">
+            <span ng-show="prediction.free50[0]"><strong>{{ prediction.free50[0] }}</strong><span class="pr">{{ prediction.free50[2] }}</span></span>
+              <br>
+            <span ng-show="prediction.free50[1]"><strong>{{ prediction.free50[1] }}</strong><span class="pr">{{ prediction.free50[3] }}</span></span>
+          </td>
+        </tr>
+        <tr>
+          <!-- <th scope="row" class="headcol h137">100 Freestyle</th> -->
+          <td ng-repeat="prediction in predictions" class="h137">
+            <span ng-show="prediction.free100[0]"><strong>{{ prediction.free100[0] }}</strong><span class="pr">{{ prediction.free100[6] }}</span></span>
+              <br>
+            <span ng-show="prediction.free100[1]"><strong>{{ prediction.free100[1] }}</strong><span class="pr">{{ prediction.free100[7] }}</span></span>
+              <br>
+            <span ng-show="prediction.free100[2]"><strong>{{ prediction.free100[2] }}</strong><span class="pr">{{ prediction.free100[8] }}</span></span>
+              <br>
+            <span ng-show="prediction.free100[3]"><strong>{{ prediction.free100[3] }}</strong><span class="pr">{{ prediction.free100[9] }}</span></span>
+              <br>
+            <span ng-show="prediction.free100[4]"><strong>{{ prediction.free100[4] }}</strong><span class="pr">{{ prediction.free100[10] }}</span></span>
+              <br>
+            <span ng-show="prediction.free100[5]"><strong>{{ prediction.free100[5] }}</strong><span class="pr">{{ prediction.free100[11] }}</span></span>
+          </td>
+        </tr>
+        <tr>
+          <!-- <th scope="row" class="headcol h137">200 Freestyle</th> -->
+          <td ng-repeat="prediction in predictions" class="h137">
+            <span ng-show="prediction.free200[0]"><strong>{{ prediction.free200[0] }}</strong><span class="pr">{{ prediction.free200[6] }}</span></span>
+              <br>
+            <span ng-show="prediction.free200[1]"><strong>{{ prediction.free200[1] }}</strong><span class="pr">{{ prediction.free200[7] }}</span></span>
+              <br>
+            <span ng-show="prediction.free200[2]"><strong>{{ prediction.free200[2] }}</strong><span class="pr">{{ prediction.free200[8] }}</span></span>
+              <br>
+            <span ng-show="prediction.free200[3]"><strong>{{ prediction.free200[3] }}</strong><span class="pr">{{ prediction.free200[9] }}</span></span>
+              <br>
+            <span ng-show="prediction.free200[4]"><strong>{{ prediction.free200[4] }}</strong><span class="pr">{{ prediction.free200[10] }}</span></span>
+              <br>
+            <span ng-show="prediction.free200[5]"><strong>{{ prediction.free200[5] }}</strong><span class="pr">{{ prediction.free200[11] }}</span></span>
+          </td>
+        </tr>
+        <tr>
+          <!-- <th scope="row" class="headcol h57">400 Freestyle</th> -->
+          <td ng-repeat="prediction in predictions" class="h57">
+            <span ng-show="prediction.free400[0]"><strong>{{ prediction.free400[0] }}</strong><span class="pr">{{ prediction.free400[2] }}</span></span>
+              <br>
+            <span ng-show="prediction.free400[1]"><strong>{{ prediction.free400[1] }}</strong><span class="pr">{{ prediction.free400[3] }}</span></span>
+          </td>
+        </tr>
+        <tr>
+          <!-- <th scope="row" class="headcol h57">1500 Freestyle</th> -->
+          <td ng-repeat="prediction in predictions" class="h57">
+            <span ng-show="prediction.free1500[0]"><strong>{{ prediction.free1500[0] }}</strong><span class="pr">{{ prediction.free1500[2] }}</span></span>
+              <br>
+            <span ng-show="prediction.free1500[1]"><strong>{{ prediction.free1500[1] }}</strong><span class="pr">{{ prediction.free1500[3] }}</span></span>
+          </td>
+        </tr>
+        <tr>
+          <!-- <th scope="row" class="headcol h57">200 Individual Medly</th> -->
+          <td ng-repeat="prediction in predictions" class="h57">
+            <span ng-show="prediction.im200[0]"><strong>{{ prediction.im200[0] }}</strong><span class="pr">{{ prediction.im200[2] }}</span></span>
+              <br>
+            <span ng-show="prediction.im200[1]"><strong>{{ prediction.im200[1] }}</strong><span class="pr">{{ prediction.im200[3] }}</span></span>
+          </td>
+        </tr>
+        <tr>
+          <!-- <th scope="row" class="headcol h57">400 Individual Medly</th> -->
+          <td ng-repeat="prediction in predictions" class="h57">
+            <span ng-show="prediction.im400[0]"><strong>{{ prediction.im400[0] }}</strong><span class="pr">{{ prediction.im400[2] }}</span></span>
+              <br>
+            <span ng-show="prediction.im400[1]"><strong>{{ prediction.im400[1] }}</strong><span class="pr">{{ prediction.im400[3] }}</span></span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+
+
+
 <div class="col-md-6 col-md-offset-3" style="text-align:center;">
-  <button type="button" class="btn btn-primary" ng-click="editBracket()" ng-show="predictionMade">Edit My Predictions</button>
+  <button type="button" class="btn btn-primary" ui-sref="createPredictions({ groupId: group._id, userId: currentUser._id })" ng-show="predictionMade">Edit My Predictions</button>
   <button type="button" class="btn btn-primary" ui-sref="createPredictions({ groupId: group._id, userId: currentUser._id })" ng-hide="predictionMade">Create Predictions</button>
 </div>
 
 <div class="col-md-6 col-md-offset-3" style="text-align:center;">
   <button type="button" class="btn btn-primary" ui-sref="editGroup({groupId: group._id})" ng-show="currentUser._id === group.creator">Edit Group Members</button>
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- <div class="col-md-12" style="text-align:center;margin-bottom:30px;margin-top:-20px;">
-  <h1>{{ group.name }}</h1>
-</div> -->
-
-<!-- <div class="col-md-10 col-md-offset-1" style="overflow:scroll;"> -->
-  <!-- <div class="row"> -->
-    <!-- EVENT COLUMN -->
-    <!-- <div style="width:200px;">
-      <div class="col-md-12">
-        <h3>Event</h3>
-      </div>
-      <div class="col-md-12">
-        <h5>100 Backstroke</h5>
-      </div>
-      <div class="col-md-12">
-        <h5>200 Backstroke</h5>
-      </div>
-      <div class="col-md-12">
-        <h5>100 Breaststroke</h5>
-      </div>
-      <div class="col-md-12">
-        <h5>200 Breaststroke</h5>
-      </div>
-      <div class="col-md-12">
-        <h5>100 Butterfly</h5>
-      </div>
-      <div class="col-md-12">
-        <h5>200 Butterfly</h5>
-      </div>
-      <div class="col-md-12">
-        <h5>50 Freestyle</h5>
-      </div>
-      <div class="col-md-12">
-        <h5>100 Freestyle</h5>
-      </div>
-      <div class="col-md-12">
-        <h5>400 Freestyle</h5>
-      </div>
-      <div class="col-md-12">
-        <h5>1500 Freestyle</h5>
-      </div>
-      <div class="col-md-12">
-        <h5>200 Individual Medly</h5>
-      </div>
-      <div class="col-md-12">
-        <h5>400 Individual Medly</h5>
-      </div>
-    </div>
- -->
-    <!-- MEMBER BRACKETS -->
-   <!--  <div class="col-md-3" ng-repeat="member in group.members" style="width:200px;">
-      <div class="col-md-12">
-        <h3>{{ member.username }}</h3>
-      </div>
-      <div class="col-md-12">
-        <h5>100 Backstroke</h5>
-      </div>
-      <div class="col-md-12">
-        <h5>200 Backstroke</h5>
-      </div>
-      <div class="col-md-12">
-        <h5>100 Breaststroke</h5>
-      </div>
-      <div class="col-md-12">
-        <h5>200 Breaststroke</h5>
-      </div>
-      <div class="col-md-12">
-        <h5>100 Butterfly</h5>
-      </div>
-      <div class="col-md-12">
-        <h5>200 Butterfly</h5>
-      </div>
-      <div class="col-md-12">
-        <h5>50 Freestyle</h5>
-      </div>
-      <div class="col-md-12">
-        <h5>100 Freestyle</h5>
-      </div>
-      <div class="col-md-12">
-        <h5>400 Freestyle</h5>
-      </div>
-      <div class="col-md-12">
-        <h5>1500 Freestyle</h5>
-      </div>
-      <div class="col-md-12">
-        <h5>200 Individual Medly</h5>
-      </div>
-      <div class="col-md-12">
-        <h5>400 Individual Medly</h5>
-      </div>
-    </div> -->
-
-  <!-- </div> -->
-<!-- </div> -->
 
 

@@ -57,4 +57,4 @@ app.run(function ($rootScope, AuthService, $state) {
 
 // MAKE A MEN / WOMEN OPTION FOR CREATING BRACKETS AND VIEWING THEM
 // MAKE MESSAGES FOR ADDING PPL TO GROUP SHOW UP
-// IMPROVE UI
+// IMPROVE UI - look at functional works website for some clean looking stuff, make form fields background same color as background of page?

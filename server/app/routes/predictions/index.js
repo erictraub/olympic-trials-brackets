@@ -17,7 +17,7 @@ router.get('/', function(req, res, next){
 });
 
 router.post('/', function(req, res, next) {
-	Prediction.findOne({ owner: req.body.owner, group: req.body.group })
+	Prediction.findOne({ owner: req.body.owner, group: req.body.group, sex: req.body.sex })
 	.then(function(prediction) {
 		if (!prediction) {
 			return Prediction.create(req.body);

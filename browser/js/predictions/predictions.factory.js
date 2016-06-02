@@ -8,15 +8,15 @@ app.factory('PredictionFactory', function($http) {
 		});
 	};
 
-	PredictionFactory.fetchAllForGroup = function(groupId) {
-		return $http.get('/api/predictions?group=' + groupId)
+	PredictionFactory.fetchAllForGroup = function(groupId, sex) {
+		return $http.get('/api/predictions?group=' + groupId + '&sex=' + sex)
 		.then(function(predictions) {
 			return predictions.data;
 		});
 	};
 
-	PredictionFactory.getOne = function(groupId, userId) {
-		return $http.get('/api/predictions?group=' + groupId + '&owner=' + userId)
+	PredictionFactory.getOne = function(groupId, userId, sex) {
+		return $http.get('/api/predictions?group=' + groupId + '&owner=' + userId + '&sex=' + sex)
 		.then(function(prediction) {
 			return prediction.data;
 		});

@@ -11,8 +11,11 @@ app.config(function ($stateProvider) {
             group: function($stateParams, GroupFactory) {
                 return GroupFactory.getById($stateParams.groupId);
             },
-            prediction: function (PredictionFactory, $stateParams) {
-                return PredictionFactory.getOne($stateParams.groupId, $stateParams.userId);
+            menPrediction: function (PredictionFactory, $stateParams) {
+                return PredictionFactory.getOne($stateParams.groupId, $stateParams.userId, 'men');
+            },
+            womenPrediction: function (PredictionFactory, $stateParams) {
+                return PredictionFactory.getOne($stateParams.groupId, $stateParams.userId, 'women');
             }
         }
     });

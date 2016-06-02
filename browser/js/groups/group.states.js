@@ -10,8 +10,11 @@ app.config(function ($stateProvider) {
             group: function($stateParams, GroupFactory) {
                 return GroupFactory.getById($stateParams.groupId);
             },
-            predictions: function(PredictionFactory, $stateParams) {
-                return PredictionFactory.fetchAllForGroup($stateParams.groupId);
+            menPredictions: function(PredictionFactory, $stateParams) {
+                return PredictionFactory.fetchAllForGroup($stateParams.groupId, 'men');
+            },
+            womenPredictions: function(PredictionFactory, $stateParams) {
+                return PredictionFactory.fetchAllForGroup($stateParams.groupId, 'women');
             }
         }
     });
