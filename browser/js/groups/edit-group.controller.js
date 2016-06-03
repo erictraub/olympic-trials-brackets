@@ -20,14 +20,14 @@ app.controller('EditGroupCtrl', function($scope, GroupFactory, group) {
 				$scope.memberAlreadyPresent = true;	
 				setTimeout(function() {
 					$('#alt2').fadeOut();
-				}, 6000)
+				}, 5000)
 			}
 			else if(message === 'user not found') {
 				$scope.memberAlreadyPresent = false;
 				$scope.userNotFound = true;
 				setTimeout(function() {
 					$('#alt1').fadeOut();
-				},15000)
+				},14000)
 			}
 			else if (message === 'member added') {
 				$scope.memberAlreadyPresent = false;
@@ -36,7 +36,7 @@ app.controller('EditGroupCtrl', function($scope, GroupFactory, group) {
 				$scope.memberAdded = true;
 				setTimeout(function() {
 					$('#alt3').fadeOut();
-				}, 6000)
+				}, 4000)
 			}
 		});
 	};

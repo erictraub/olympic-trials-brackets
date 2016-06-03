@@ -54,6 +54,5 @@ app.run(function ($rootScope, AuthService, $state) {
 
 });
 
-
-// MAKE MESSAGES FOR ADDING PPL TO GROUP SHOW UP
+// MAKE IT SO CANT ENTER EMPTY GROUP NAME (NG-DISABELD/ NG-MINLENTH)
 // IMPROVE UI - look at functional works website for some clean looking stuff, make form fields background same color as background of page?

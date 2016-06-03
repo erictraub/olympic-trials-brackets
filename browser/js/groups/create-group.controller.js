@@ -1,5 +1,6 @@
 app.controller('CreateGroupCtrl', function($scope, currentUser, GroupFactory, $state) {
 	$scope.currentUser = currentUser;
+	$scope.groupName = '';
 
 	$scope.createGroup = function() {
 		GroupFactory.createGroup($scope.groupName, currentUser._id)
