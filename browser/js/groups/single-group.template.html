@@ -8,8 +8,8 @@
 
 <div class="row" style="margin-bottom: 20px;">
   <div class="col-md-6 col-md-offset-3" style="text-align:center;">
-    <button type="button" class="btn btn-primary btn6" ng-click="showMenBracket()">Men's Bracket</button>
-    <button type="button" class="btn btn-primary btn6" ng-click="showWomenBracket()">Women's Bracket</button>
+    <button type="button" class="btn btn-primary btn6" ng-click="showMenBracket()"><strong>Men's Bracket</strong></button>
+    <button type="button" class="btn btn-primary btn6" ng-click="showWomenBracket()"><strong>Women's Bracket</strong></button>
   </div>
 </div>
 
@@ -212,7 +212,7 @@
     <table class="table table-striped" style="background-color: white;color: rgb(31, 47, 130);">
       <thead style="color: white;background-color: rgb(31, 47, 130);">
         <tr>
-          <th class="headcol ctr wless57">EVENT</th>
+          <th class="headcol ctr wless57 th5">EVENT</th>
         </tr>
       </thead>
       <tbody>
@@ -265,7 +265,7 @@
       <thead style="color: white;background-color: rgb(31, 47, 130);">
         <tr>
           <!-- <th class="headcol">Event</th> -->
-          <th ng-repeat="prediction in predictions" class="ctr h57">{{ prediction.owner.username | uppercase }}</th>
+          <th ng-repeat="prediction in predictions" class="ctr h57 th5">{{ prediction.owner.username | uppercase }}</th>
         </tr>
       </thead>
       <tbody>
@@ -398,8 +398,8 @@
 
 
 <div class="col-md-6 col-md-offset-3" style="text-align:center;">
-  <button type="button" class="btn btn-primary btn6" ui-sref="createPredictions({ groupId: group._id, userId: currentUser._id })" ng-show="predictionMade" style="margin-bottom: 15px;">Edit My Predictions</button>
-  <button type="button" class="btn btn-primary btn6" ui-sref="createPredictions({ groupId: group._id, userId: currentUser._id })" ng-hide="predictionMade" style="margin-bottom: 15px;">Create Predictions</button>
+  <button type="button" class="btn btn-primary btn7" ui-sref="createPredictions({ groupId: group._id, userId: currentUser._id })" ng-show="predictionMade" style="margin-bottom: 15px;"><h4>Edit My Predictions</h4></button>
+  <button type="button" class="btn btn-primary btn7" ui-sref="createPredictions({ groupId: group._id, userId: currentUser._id })" ng-hide="predictionMade" style="margin-bottom: 15px;">Create Predictions</button>
 </div>
 
 <div class="col-md-6 col-md-offset-3" style="text-align:center;margin-bottom: 90px;">

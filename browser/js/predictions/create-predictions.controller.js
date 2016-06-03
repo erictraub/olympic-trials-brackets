@@ -3,23 +3,6 @@ app.controller('CreatePredictionsCtrl', function($scope, PredictionFactory, curr
 	$scope.currentUser = currentUser;
 	$scope.showMen = false;
 	$scope.showWomen = false;
-	// $scope.prediction = menPrediction[0] || { 
-	// 		group: group._id,
-	// 		owner: currentUser._id,
-	// 		back100: [],
-	// 		back200: [],
-	// 		breast100: [],
-	// 		breast200: [],
-	// 		fly100: [],
-	// 		fly200: [],
-	// 		free50: [],
-	// 		free100: [],
-	// 		free200: [],
-	// 		free400: [],
-	// 		free1500: [],
-	// 		im200: [],
-	// 		im400: []
-	// 	};
 
 	$scope.submitPrediction = function() {
 		console.log('prediction in submit: ', $scope.prediction)
