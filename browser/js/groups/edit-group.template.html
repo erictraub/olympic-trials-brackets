@@ -3,7 +3,7 @@
 <div class="row" style="margin-bottom:40px;">
 	<div clsss="col-md-12" style="text-align:center;">
 		<h1>{{ group.name }}</h1>
-		<button type="submit" class="btn btn-default" ui-sref="singleGroup({ groupId: group._id })">View Group Brackets</button>
+		<button type="submit" class="btn btn-default btn3 shadow1" ui-sref="singleGroup({ groupId: group._id })">View Group Brackets</button>
 	</div>
 </div>
 
@@ -17,7 +17,7 @@
 		    <div class="form-group">
 		        <input type="text" ng-model="searchedEmail" class="form-control" placeholder="search by email">
 		    </div>
-		    <button type="submit" class="btn btn-default" ng-click="addUserToGroup()">Add Member</button>
+		    <button type="submit" class="btn btn-default btn2 shadow1" ng-click="addUserToGroup()">Add Member</button>
 		</form>
 
 
@@ -46,8 +46,8 @@
 
 	<div class="col-md-4 rnd">
 		<h3>Current Members</h3>
-		<table class='table table-striped shadow2' ng-show="true">
-		  <thead>
+		<table class='table table-striped shadow2' ng-show="true" style="color: background-color:rgb(31, 47, 130);color: rgb(31, 47, 130);">
+		  <thead style="background-color:rgb(31, 47, 130);color: white;">
 		    <tr>
 		      <th>Member Name</th>
 		      <th>Member Email</th>
