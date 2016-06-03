@@ -54,5 +54,7 @@ app.run(function ($rootScope, AuthService, $state) {
 
 });
 
-// MAKE IT SO CANT ENTER EMPTY GROUP NAME (NG-DISABELD/ NG-MINLENTH)
-// IMPROVE UI - look at functional works website for some clean looking stuff, make form fields background same color as background of page?
+// CONTINUE NAVBAR UI
+// FIX STATE URL NAMES
+// MAKE DEKETE USRE FROM GROUP
+// OPTIMIZE FOR MOBILE

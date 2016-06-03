@@ -2,14 +2,14 @@
 
 <div class="row">
   <div class="col-md-12" style="text-align:center;margin-bottom:20px;">
-  <h1>{{ group.name | uppercase }}</h1>
+  <h1 style="color: rgb(31, 47, 130)" class="title">{{ group.name | uppercase }}</h1>
   </div>
 </div>  
 
-<div class="row">
+<div class="row" style="margin-bottom: 20px;">
   <div class="col-md-6 col-md-offset-3" style="text-align:center;">
-    <button type="button" class="btn btn-primary" ng-click="showMenBracket()">Men's Bracket</button>
-    <button type="button" class="btn btn-primary" ng-click="showWomenBracket()">Women's Bracket</button>
+    <button type="button" class="btn btn-primary btn6" ng-click="showMenBracket()">Men's Bracket</button>
+    <button type="button" class="btn btn-primary btn6" ng-click="showWomenBracket()">Women's Bracket</button>
   </div>
 </div>
 
@@ -19,10 +19,10 @@
 <div class="row" ng-show="showMen">
   <div class="col-md-1 col-xs-0"></div>
   <div class="col-md-2 col-xs-2">
-    <table class="table table-striped" style="background-color: white;color: rgb(31, 47, 130);">
-      <thead>
+    <table class="table table-striped" style="background-color: white;color: rgb(31, 47, 130);border-radius: 12px;">
+      <thead style="color: white;background-color: rgb(31, 47, 130);">
         <tr>
-          <th class="headcol ctr wless57">EVENT</th>
+          <th class="headcol ctr wless57 th5">EVENT</th>
         </tr>
       </thead>
       <tbody>
@@ -72,10 +72,10 @@
 
   <div class="col-md-8 col-xs-10" style="overflow-x:auto;">
     <table class="table table-striped" style="background-color: white;color: rgb(31, 47, 130);">
-      <thead>
+      <thead style="color: white;background-color: rgb(31, 47, 130);">
         <tr>
           <!-- <th class="headcol">Event</th> -->
-          <th ng-repeat="prediction in predictions" class="ctr h57">{{ prediction.owner.username | uppercase }}</th>
+          <th ng-repeat="prediction in predictions" class="ctr h57 th5">{{ prediction.owner.username | uppercase }}</th>
         </tr>
       </thead>
       <tbody>
@@ -210,7 +210,7 @@
   <div class="col-md-1 col-xs-0"></div>
   <div class="col-md-2 col-xs-2">
     <table class="table table-striped" style="background-color: white;color: rgb(31, 47, 130);">
-      <thead>
+      <thead style="color: white;background-color: rgb(31, 47, 130);">
         <tr>
           <th class="headcol ctr wless57">EVENT</th>
         </tr>
@@ -262,7 +262,7 @@
 
   <div class="col-md-8 col-xs-10" style="overflow-x:auto;">
     <table class="table table-striped" style="background-color: white;color: rgb(31, 47, 130);">
-      <thead>
+      <thead style="color: white;background-color: rgb(31, 47, 130);">
         <tr>
           <!-- <th class="headcol">Event</th> -->
           <th ng-repeat="prediction in predictions" class="ctr h57">{{ prediction.owner.username | uppercase }}</th>
@@ -398,12 +398,12 @@
 
 
 <div class="col-md-6 col-md-offset-3" style="text-align:center;">
-  <button type="button" class="btn btn-primary" ui-sref="createPredictions({ groupId: group._id, userId: currentUser._id })" ng-show="predictionMade">Edit My Predictions</button>
-  <button type="button" class="btn btn-primary" ui-sref="createPredictions({ groupId: group._id, userId: currentUser._id })" ng-hide="predictionMade">Create Predictions</button>
+  <button type="button" class="btn btn-primary btn6" ui-sref="createPredictions({ groupId: group._id, userId: currentUser._id })" ng-show="predictionMade" style="margin-bottom: 15px;">Edit My Predictions</button>
+  <button type="button" class="btn btn-primary btn6" ui-sref="createPredictions({ groupId: group._id, userId: currentUser._id })" ng-hide="predictionMade" style="margin-bottom: 15px;">Create Predictions</button>
 </div>
 
-<div class="col-md-6 col-md-offset-3" style="text-align:center;">
-  <button type="button" class="btn btn-primary" ui-sref="editGroup({groupId: group._id})" ng-show="currentUser._id === group.creator">Edit Group Members</button>
+<div class="col-md-6 col-md-offset-3" style="text-align:center;margin-bottom: 90px;">
+  <button type="button" class="btn btn-primary btn6" ui-sref="editGroup({groupId: group._id})" ng-show="currentUser._id === group.creator">Edit Group Members</button>
 </div>
 
 
