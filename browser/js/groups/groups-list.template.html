@@ -12,7 +12,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr ng-repeat="group in groups" ui-sref="singleGroup({ groupId: group._id })">
+        <tr ng-repeat="group in groups" ui-sref="singleGroup({ groupId: group._id })" class="pointer dkgr">
           <td class="bf ctr">{{ group.name | uppercase }}</td>
           <td class="ctr">{{ group.members.length }}</td>
           <td class="ctr">{{ group.creator.username }}</td>

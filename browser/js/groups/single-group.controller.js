@@ -1,6 +1,15 @@
 app.controller('SingleGroupCtrl', function($scope, group, currentUser, $state, menPredictions, womenPredictions) {
 	$scope.group = group;
 	$scope.currentUser = currentUser;
+	$scope.empty = false;
+
+
+
+	if (!menPredictions.length && !womenPredictions.length) {
+		$scope.empty = true;
+	};
+
+
 
 	if (menPredictions.length) {
 		$scope.predictions = menPredictions;
