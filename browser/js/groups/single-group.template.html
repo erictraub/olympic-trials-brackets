@@ -419,9 +419,9 @@
   <h3 ng-show="!predictions.length && showMen && !empty" style="margin-bottom: 30px;margin-top: 70px;"><i>There are currently no <strong>men's</strong> predictions in group...</i></h3>
   <h3 ng-show="!predictions.length && showWomen && !empty" style="margin-bottom: 30px;margin-top: 70px;"><i>There are currently no <strong>women's</strong> predictions in group...</i></h3>
   <button ng-show="!predictions.length && showMen" type="button" class="btn btn-primary btn7 btn9" ui-sref="createPredictions({ groupId: group._id, userId: currentUser._id })" style="margin-bottom: 60px;"><h4><strong>Create Predictions!</strong></h4></button>
-  <button ng-show="!predictions.length && showWomen" type="button" class="btn btn-primary btn7 btn9" ui-sref="createPredictions({ groupId: group._id, userId: currentUser._id })" style="margin-bottom: 60px;"><h4><strong>Create Predictions!</strong></h4></button>
+  <button ng-show="!predictions.length && showWomen" type="button" class="btn btn-primary btn7 btn9" ui-sref="createPredictions({ groupId: group._id, userId: currentUser._id })" style="margin-bottom: 40px;"><h4><strong>Create Predictions!</strong></h4></button>
   <br>
-  <button type="button" class="btn btn-default btn7" ui-sref="editGroup({groupId: group._id})" ng-show="currentUser._id === group.creator && !empty" style="color: white;margin-bottom: 200px;"><h3>Add Members To Group</h3></button>
+  <button type="button" class="btn btn-default btn7" ui-sref="editGroup({groupId: group._id})" ng-show="currentUser._id === group.creator" style="color: white;margin-bottom: 200px;"><h4>Add Members To Group</h4></button>
 </div>
 
 
