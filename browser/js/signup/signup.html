@@ -9,7 +9,7 @@
 
             <div class="form-group">
                 <label for="username">Username</label>
-                <input type="text" ng-model="signup.username" class="form-control" id="username" placeholder="Enter username" maxlength="14">
+                <input type="text" ng-model="signup.username" name="username" class="form-control" id="username" placeholder="Enter username" maxlength="14">
             </div>
             <div class="form-group">
                 <label for="email">Email address</label>
@@ -19,8 +19,9 @@
                 <label for="signup-password">Password</label>
                 <input type="password" name="password" ng-model="signup.password" class="form-control" id="signup-password" placeholder="Password">
             </div>
-            <button type="submit" class="btn btn-default">Sign up</button>
+            <button type="submit" class="btn btn-default shadow1" ng-disabled="signup.username.length < 1">Sign up</button>
         </form>
     </div>
 </div>
+
 

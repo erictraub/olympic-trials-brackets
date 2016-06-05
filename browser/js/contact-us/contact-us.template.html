@@ -1,0 +1,28 @@
+<div class="row" style="height:60px;"></div>
+
+<div class="row" style="margin-bottom: 20px;">
+
+    <div class="col-md-4 col-md-offset-4">
+        <form name="signupForm">
+            <div class="form-group">
+                <label>Subject:</label>
+                <input type="text" ng-model="message.subject" class="form-control">
+            </div>
+            <div class="form-group">
+                <label>Message:</label>
+                <br>
+                <textarea rows="6" cols="50" ng-model="message.content"></textarea>
+            </div>
+            <button class="btn btn-default shadow1" ng-click="sendMessage()">Submit</button>
+        </form>
+    </div>
+
+</div>
+
+
+    <!-- MESSAGE SENT ALERT -->
+<div class="row" ng-show="messageSent">
+    <div class='col-md-4 col-md-offset-4' id="alt2" style="text-align:center;">
+        <h4>Message Sent!</h4>
+    </div>
+</div>

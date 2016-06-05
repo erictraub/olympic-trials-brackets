@@ -19,25 +19,35 @@ app.controller('EditGroupCtrl', function($scope, GroupFactory, group) {
 				$scope.memberAdded = false;	
 				$scope.memberAlreadyPresent = true;	
 				setTimeout(function() {
-					$('#alt2').fadeOut();
+					$scope.memberAlreadyPresent = false;
+					$scope.$evalAsync();
 				}, 5000)
 			}
 			else if(message === 'user not found') {
 				$scope.memberAlreadyPresent = false;
+				$scope.memberAdded = false;	
 				$scope.userNotFound = true;
 				setTimeout(function() {
-					$('#alt1').fadeOut();
+					$scope.userNotFound = false;
+					$scope.$evalAsync();
 				},14000)
 			}
 			else if (message === 'member added') {
 				$scope.memberAlreadyPresent = false;
 				$scope.userNotFound = false;
-				$scope.memberAdded = false;
 				$scope.memberAdded = true;
 				setTimeout(function() {
-					$('#alt3').fadeOut();
+					$scope.memberAdded = false;
+					$scope.$evalAsync();
 				}, 4000)
 			}
+		});
+	};
+
+	$scope.deleteMember = function(member) {
+		GroupFactory.deleteMemberFromGroup($scope.group._id, member._id)
+		.then(function(members) {
+			console.log('members back',members);
 		});
 	};
 

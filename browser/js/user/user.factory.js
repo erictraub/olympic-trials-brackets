@@ -15,5 +15,12 @@ app.factory('UserFactory', function($http) {
 		});
 	};
 
+	UserFactory.updateUser = function(userId, updateProp, updateKey) {
+		return $http.put('api/users/' + userId, { updateProp: updateProp, updateKey: updateKey })
+		.then(function(user) {
+			return user.data;
+		});
+	};
+
 	return UserFactory;
 });

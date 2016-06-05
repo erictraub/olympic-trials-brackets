@@ -8,13 +8,18 @@ var schema = new mongoose.Schema({
         type: String
     },
     email: {
-        type: String
+        type: String,
+        unique: true
     },
     password: {
         type: String
     },
     salt: {
         type: String
+    },
+    isAdmin: {
+        type: Boolean,
+        default: false
     }
 });
 

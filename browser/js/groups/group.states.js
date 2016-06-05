@@ -22,7 +22,7 @@ app.config(function ($stateProvider) {
 
 app.config(function ($stateProvider) {
     $stateProvider.state('groupList', {
-        url: '/groupList',
+        url: '/myGroups',
         templateUrl: 'js/groups/groups-list.template.html',
         controller: 'GroupsListCtrl',
         resolve: {

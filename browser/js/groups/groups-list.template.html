@@ -2,7 +2,7 @@
 
   <div style="min-height: 60px;"></div>
 
-  <div class="col-md-6 col-md-offset-3">
+  <div class="col-md-6 col-md-offset-3" ng-show="groups.length">
     <table class="table table-hover table-striped shadow1" style="background-color: white;color: rgb(31, 47, 130);">
       <thead style="background-color:rgb(31, 47, 130);color:white;">
         <tr>
@@ -19,6 +19,11 @@
         </tr>
       </tbody>
     </table>
+  </div>
+
+  <div class="col-md-6 col-md-offset-3" ng-hide="groups.length" style="text-align:center;">
+    <h2>You currently dont have any groups...</h2>
+    <button type="button" class="btn btn-primary btn7 shadow1" ui-sref="createGroup" style="margin-top: 25px;"><h2>Create one!</h2></button>
   </div>
   
 </div>

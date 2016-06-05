@@ -11,6 +11,7 @@ app.config(function ($stateProvider) {
 app.controller('SignupCtrl', function ($scope, AuthService, $state, UserFactory) {
 
     $scope.signup = {};
+    $scope.signup.username = '';
     $scope.error = null;
 
     $scope.sendSignup = function (signupInfo) {
@@ -34,5 +35,6 @@ app.controller('SignupCtrl', function ($scope, AuthService, $state, UserFactory)
             return {"color": "red"};
         }
     }
+
 
 });

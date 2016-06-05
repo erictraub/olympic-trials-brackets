@@ -399,11 +399,11 @@
 
 <div class="col-md-6 col-md-offset-3" style="text-align:center;">
   <button type="button" class="btn btn-primary btn7" ui-sref="createPredictions({ groupId: group._id, userId: currentUser._id })" ng-show="predictionMade" style="margin-bottom: 15px;"><h4>Edit My Predictions</h4></button>
-  <button type="button" class="btn btn-primary btn7" ui-sref="createPredictions({ groupId: group._id, userId: currentUser._id })" ng-hide="predictionMade" style="margin-bottom: 15px;">Create Predictions</button>
+  <button type="button" class="btn btn-primary btn7" ui-sref="createPredictions({ groupId: group._id, userId: currentUser._id })" ng-hide="predictionMade" style="margin-bottom: 15px;"><h4>Create Predictions</h4></button>
 </div>
 
 <div class="col-md-6 col-md-offset-3" style="text-align:center;margin-bottom: 90px;">
-  <button type="button" class="btn btn-primary btn6" ui-sref="editGroup({groupId: group._id})" ng-show="currentUser._id === group.creator">Edit Group Members</button>
+  <button type="button" class="btn btn-primary btn7" ui-sref="editGroup({groupId: group._id})" ng-show="currentUser._id === group.creator"><h3>Add Group Members</h3></button>
 </div>
 
 

@@ -1,0 +1,46 @@
+<div class="row" style="margin-bottom: 100px;">
+
+<!-- UPDATE USER -->
+    <div class="col-md-4">
+    	<h1>Update User</h1>
+        <form name="signupForm">
+            <div class="form-group">
+                <label>User ID</label>
+                <input type="text" ng-model="userId" class="form-control">
+            </div>
+            <div class="form-group">
+                <label>Property to update:</label>
+                <input type="text" ng-model="updateProp" class="form-control">
+            </div>
+            <div class="form-group">
+                <label>New property value:</label>
+                <input type="text" ng-model="updateKey" class="form-control">
+            </div>
+            <button class="btn btn-default shadow1" ng-click="updateUser()">Update</button>
+        </form>
+    </div>
+
+</div>
+
+
+<div class="row">
+    <button class="btn btn-default shadow1" ng-click="getAllUsers()">Get all users</button>
+
+    <h3>Number of users: {{ allUsers.length }}</h3>
+
+</div>
+
+
+<div class="row">
+    
+    <button class="btn btn-default shadow1" ng-click="getAllMessages()">Get all messages</button>
+
+    <div class="col-md-4" style="margin-top: 20px;" ng-repeat="message in allMessages">
+        <p><strong>From:</strong> {{ message.from._id }}</p>
+        <p><strong>Username:</strong> {{ message.from.username }}</p>
+        <p><strong>Subject:</strong> {{ message.subject }}</p>
+        <p><strong>Date:</strong> {{ message.date }}</p>
+        <p><strong>Content:</strong> {{ message.content }}</p>
+    </div>
+
+</div>

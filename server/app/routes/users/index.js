@@ -31,9 +31,13 @@ router.post('/', function(req, res, next){
 });
 
 router.put('/:userId', function(req, res, next){
-	User.findByIdAndUpdate(req.params.userId/*, {$set: {'finalImage': req.body.finalImage}}*/, {new: true})
-	.then(function(updatedUser){
-		res.status(200).send(updatedUser);
+	User.findById(req.params.userId)
+	.then(function(user){
+		user[req.body.updateProp] = req.body.updateKey;
+		return user.save();
+	})
+	.then(function(user) {
+		res.send(user);
 	})
 	.catch(next);
 });

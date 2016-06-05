@@ -54,6 +54,14 @@ app.factory('GroupFactory', function($http) {
 		});
 	};
 
+	GroupFactory.deleteMemberFromGroup = function(groupId, memberId) {
+		return $http.put('/api/groups/' + groupId + '/removeMember/' + memberId)
+		.then(function(group) {
+			angular.copy(group.data.members, cachedMembers);
+			return cachedMembers;
+		});
+	};
+
 
 	return GroupFactory;
 });

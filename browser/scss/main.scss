@@ -193,7 +193,7 @@ button:hover {
 }
 
 .hbtn:hover {
-  background-color: #626F78;
+  background-color: #A2ACB3;
   color: white;
   font-size: 30px;
 }
@@ -225,6 +225,23 @@ button:hover {
   );
 }
 
+#lgout:hover {
+  background-color: #EEF1F5 !important;
+}
+
+.suli {
+  background-color: #404C8A !important;
+  color: white;
+  padding-right: 15px;
+  padding-left: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.suli:hover {
+  background-color: #969EC5 !important;
+  color: white;
+}
 
 @import 'directives/main';
 @import 'home/main';

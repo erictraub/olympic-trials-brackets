@@ -22,6 +22,13 @@ app.factory('PredictionFactory', function($http) {
 		});
 	};
 
+	PredictionFactory.fetchAllForUserBySex = function(userId, sex) {
+		return $http.get('/api/predictions?owner=' + userId + '&sex=' + sex)
+		.then(function(predictions) {
+			return predictions.data;
+		});
+	};
+
 
 	return PredictionFactory;
 });

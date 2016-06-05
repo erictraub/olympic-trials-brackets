@@ -1,4 +1,4 @@
-<div class="row" style="margin-top: 60px;">
+<div class="row" style="margin-top: 60px;margin-bottom:30px;">
   <div class="col-md-12" style="text-align:center;">
     <button type="button" class="btn btn-primary" ng-click="showMenPredictions()">Edit Men Predictions</button>
     <button type="button" class="btn btn-primary" ng-click="showWomenPredictions()">Edit Women Predictions</button>
@@ -12,7 +12,38 @@
 
 
 <div class="row" ng-show="showMen || showWomen">
-  <div class="col-md-4"></div>
+
+
+  <div class="col-md-4" style="text-align:center;">
+    
+    <button type="button" class="btn btn-primary btn7 shadow1" ng-click="showOtherPredictions()" style="margin-top:25px;margin-bottom:20px;" ng-hide="showOtherPs"><h4><span>Use predictions from</span><br><span>different group</span></h4></button>
+
+
+    <div class="col-md-10 col-md-offset-1" ng-show="showOtherPs" style="text-align:center;">
+
+    <h4><strong>Click on group to use predictions</strong></h4>
+
+      <table class="table table-hover table-striped" style="background-color: white;color: rgb(31, 47, 130);">
+        <thead style="background-color:rgb(31, 47, 130);color:white;">
+          <tr>
+            <th class="th1 ctr">Group Name</th>
+            <th class="th1 ctr">Sex</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="prediction in previousPredictions" ng-click="prefillPrediction(prediction)">
+            <td class="bf ctr">{{ prediction.group.name }}</td>
+            <td class="ctr">{{ prediction.sex }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+
+  </div>
+
+
+
   <div class="col-md-3">
     <form>
 
@@ -208,7 +239,7 @@
 
 
 <!-- SUBMIT BUTTON -->
-<div class="row">
+<div class="row" style="margin-bottom: 130px;">
   <div class="col-md-12" style="text-align:center;">
     <button type="button" class="btn btn-primary" ng-click="submitPrediction()" ng-show="showMen || showWomen">Submit Prediction!</button>
   </div>

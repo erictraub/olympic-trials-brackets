@@ -65,5 +65,29 @@ router.get('/:groupId/members', function(req, res, next){
 	.catch(next);
 });
 
+router.put('/:groupId/removeMember/:memberId', function(req, res, next) {
+	Group.findById(req.params.groupId)
+	.populate('members')
+	.then(function(group) {
+		group.members.pull(req.params.memberId);
+		return group.save();
+	})
+	.then(function(group) {
+		res.send(group);
+	})
+	.catch(next);
+});
+
+
+
+
+
+
+
+
+
+
+
+
 
 

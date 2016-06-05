@@ -51,14 +51,19 @@
 		    <tr>
 		      <th>Member Name</th>
 		      <th>Member Email</th>
+		      <th>Delete Member</th>
 		    </tr>
 		  </thead>
 		  <tbody>
-		    <tr ng-repeat="member in members" ui-sref="#">
+		    <tr ng-repeat="member in members">
 		      <td>{{ member.username }}</td>
 		      <td>{{ member.email }}</td>
+		      <td style="text-align: center;color: red;" ng-click="member._id !== group.creator && deleteMember(member)"><strong ng-show="member._id !== group.creator"> X </strong></td>
 		    </tr>
 		  </tbody>
 		</table>
 	</div>
+
+	<div class="col-md-2"></div>
+
 </div>

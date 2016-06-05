@@ -8,11 +8,10 @@
 		        <input type="text" name="gpName" ng-model="groupName" class="form-control" placeholder="enter name" ng-minlength="1">
 		    </div>
 		    <div class="col-md-8 col-md-offset-2">
-		    	<div id="alt1" ng-show="groupName.length > 30" style="padding-top: 10px;padding-bottom: 10px;"><h4>Name is too long!</h4></div>
+		    	<div id="alt1" ng-show="groupName.length > 25" style="padding-top: 10px;padding-bottom: 10px;"><h4>Name is too long!</h4></div>
 		    </div>
-		    <button ng-disabled="groupName.length < 1 || groupName.length > 30" type="submit" id="ctgp" class="btn btn-default shadow1" ng-click="createGroup()" style="color:#1E3961;">Create Group</button>
+		    <button ng-disabled="groupName.length < 1 || groupName.length > 25" type="submit" id="ctgp" class="btn btn-default shadow1" ng-click="createGroup()" style="color:#1E3961;">Create Group</button>
 		</form>
 	</div>
 </div>
 
-<!-- <pre>{{ createGroupName | json }}</pre> -->

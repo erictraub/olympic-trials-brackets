@@ -9,7 +9,7 @@ module.exports = router;
 
 router.get('/', function(req, res, next){
 	Prediction.find(req.query)
-	.populate('owner')
+	.populate('owner group')
 	.then(function(prediction){
 		res.status(200).send(prediction);
 	})

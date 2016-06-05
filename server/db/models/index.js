@@ -4,3 +4,4 @@
 require('./user');
 require('./prediction');
 require('./group');
+require('./message');
