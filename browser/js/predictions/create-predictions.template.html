@@ -14,12 +14,12 @@
 <div class="row" ng-show="showMen || showWomen">
 
 
-  <div class="col-md-4" style="text-align:center;">
+  <div class="col-md-4 col-xs-8 col-sm-8" style="text-align:center;">
     
     <button type="button" class="btn btn-primary btn7 shadow1" ng-click="showOtherPredictions()" style="margin-top:25px;margin-bottom:20px;" ng-hide="showOtherPs"><h4><span>Use predictions from</span><br><span>different group</span></h4></button>
 
 
-    <div class="col-md-10 col-md-offset-1" ng-show="showOtherPs" style="text-align:center;">
+    <div class="col-md-10" ng-show="showOtherPs && previousPredictions.length" style="text-align:center;">
 
     <h4><strong>Click on group to use predictions</strong></h4>
 
@@ -37,6 +37,14 @@
           </tr>
         </tbody>
       </table>
+
+    </div>
+
+    <div style="text-align: center;" ng-show="showOtherPs && !previousPredictions.length" class="col-md-12">
+        <h4>You don't currently have any</h4>
+        <h4>other predicitons to use...</h4>
+        <br>
+        <h4>Make your first one!  --></h4>
     </div>
 
 

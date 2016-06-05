@@ -1,17 +1,17 @@
 <nav class="navbar navbar-static-top" style="margin-bottom: 0px;margin-top: -10px;">
     <div class="container">
         <div class="navbar-header">
-            <fullstack-logo></fullstack-logo>
+            <fullstack-logo style="width: 120px;margin-left: -30px;margin-bottom: -5px;margin-top: -2px;"></fullstack-logo>
         </div>
         <ul class="nav navbar-nav" style="color: #1F2F82">
 <!--             <li ng-repeat="item in items" ng-show="!item.auth || isLoggedIn()">
                 <a ui-sref-active="active" ui-sref="{{ item.state }}"><h4 style="color: #1F2F82">{{ item.label }}</h4></a>
             </li> -->
-            <li>
+            <!-- <li>
                 <a ui-sref-active="active" ui-sref="home"><h4 style="color: #1F2F82">Home</h4></a>
-            </li>
+            </li> -->
             <li ng-if="user">
-                <a ui-sref-active="active" ui-sref="landing"><h4 style="color: #1F2F82">Landing</h4></a>
+                <a ui-sref-active="active" ui-sref="landing"><h4 style="color: #1F2F82">Home</h4></a>
             </li>
             <li ng-if="user">
                 <a ui-sref-active="active" ui-sref="createGroup"><h4 style="color: #1F2F82">Create Group</h4></a>

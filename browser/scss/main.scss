@@ -103,7 +103,7 @@ table {
   background-color: #3C66AB;
   border-radius: 12px;
   text-align: center;
-  height: 200px;
+  height: 220px;
   border: none;
   box-shadow: 10px 10px 25px 0px rgba(0,0,0,0.67);
 }
@@ -185,6 +185,10 @@ button:hover {
   color:rgb(31, 47, 130);
 }
 
+.btn8:hover {
+  background-color: #908C8C;
+}
+
 .hbtn {
   background-color: #DFE4EC;
   outline: none;
@@ -242,6 +246,62 @@ button:hover {
   background-color: #969EC5 !important;
   color: white;
 }
+
+.sm1 {
+  font-size: 15px !important;
+  color: #404C8A;
+  font-weight: bold;
+}
+
+.sm2 {
+  font-weight: bold;
+  font-size: 15px !important;
+  color: #404C8A;
+  margin-top: -10px;
+}
+
+.sm3 {
+  font-weight: bold;
+  font-size: 19px !important;
+  color: #404C8A;
+  margin-top: -15px;
+}
+
+#logo1 {
+    text-align: center;
+    background-color: #A7A3A3;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 10px;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.bg1 {
+  font-size: 70px;
+}
+
+.bg2 {
+  font-size: 40px;
+}
+
+@media screen and (max-width: 750px) {
+    .mbno {
+        display: none;
+    }
+
+}
+
+@media screen and (min-width: 750px) {
+  .dtno {
+    display: none;
+  }
+}
+
+
+
 
 @import 'directives/main';
 @import 'home/main';

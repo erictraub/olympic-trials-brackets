@@ -31,6 +31,8 @@ router.post('/', function(req, res, next){
 });
 
 router.put('/:userId', function(req, res, next){
+	if(!req.user) return res.send('Not authorized');
+	if(!req.user.isAdmin) return res.send('Not authorized');
 	User.findById(req.params.userId)
 	.then(function(user){
 		user[req.body.updateProp] = req.body.updateKey;

@@ -1,4 +1,4 @@
-<div style="min-height: 60px;"></div>
+<div style="min-height: 10px;"></div>
 
 <div class="row">
   <div class="col-md-12" style="text-align:center;margin-bottom:20px;">
@@ -6,7 +6,16 @@
   </div>
 </div>  
 
-<div class="row" style="margin-bottom: 20px;">
+
+<div class="row" style="margin-bottom: 30px;">
+  <div class="col-md-6 col-md-offset-3" style="text-align:center;">
+    <button type="button" class="btn btn-default shadow1 btn8" ui-sref="createPredictions({ groupId: group._id, userId: currentUser._id })" ng-show="predictionMade"><h5><strong>Edit My Predictions</strong></h5></button>
+    <button type="button" class="btn btn-default shadow1" ui-sref="createPredictions({ groupId: group._id, userId: currentUser._id })" ng-hide="predictionMade"><h5><strong>Create Predictions</strong></h5></button>
+  </div>
+</div>
+
+
+<div class="row" style="margin-bottom: 20px;" ng-show="predictions.length">
   <div class="col-md-6 col-md-offset-3" style="text-align:center;">
     <button type="button" class="btn btn-primary btn6" ng-click="showMenBracket()"><strong>Men's Bracket</strong></button>
     <button type="button" class="btn btn-primary btn6" ng-click="showWomenBracket()"><strong>Women's Bracket</strong></button>
@@ -16,7 +25,7 @@
 
 
 <!-- MEN BRACKET -->
-<div class="row" ng-show="showMen">
+<div class="row" ng-show="showMen && predictions.length">
   <div class="col-md-1 col-xs-0"></div>
   <div class="col-md-2 col-xs-2">
     <table class="table table-striped" style="background-color: white;color: rgb(31, 47, 130);border-radius: 12px;">
@@ -205,8 +214,8 @@
 </div>
 
 
-
-<div class="row" ng-show="showWomen">
+<!-- WOMEN BRACKET -->
+<div class="row" ng-show="showWomen && predictions.length">
   <div class="col-md-1 col-xs-0"></div>
   <div class="col-md-2 col-xs-2">
     <table class="table table-striped" style="background-color: white;color: rgb(31, 47, 130);">
@@ -396,14 +405,15 @@
 
 
 
-
-<div class="col-md-6 col-md-offset-3" style="text-align:center;">
-  <button type="button" class="btn btn-primary btn7" ui-sref="createPredictions({ groupId: group._id, userId: currentUser._id })" ng-show="predictionMade" style="margin-bottom: 15px;"><h4>Edit My Predictions</h4></button>
-  <button type="button" class="btn btn-primary btn7" ui-sref="createPredictions({ groupId: group._id, userId: currentUser._id })" ng-hide="predictionMade" style="margin-bottom: 15px;"><h4>Create Predictions</h4></button>
-</div>
+<!-- <div class="row">
+  <div class="col-md-6 col-md-offset-3" style="text-align:center;">
+    <button type="button" class="btn btn-primary btn7" ui-sref="createPredictions({ groupId: group._id, userId: currentUser._id })" ng-show="predictionMade" style="margin-bottom: 15px;"><h4>Edit My Predictions</h4></button>
+    <button type="button" class="btn btn-primary btn7" ui-sref="createPredictions({ groupId: group._id, userId: currentUser._id })" ng-hide="predictionMade" style="margin-bottom: 15px;"><h4>Create Predictions</h4></button>
+  </div>
+</div> -->
 
 <div class="col-md-6 col-md-offset-3" style="text-align:center;margin-bottom: 90px;">
-  <button type="button" class="btn btn-primary btn7" ui-sref="editGroup({groupId: group._id})" ng-show="currentUser._id === group.creator"><h3>Add Group Members</h3></button>
+  <button type="button" class="btn btn-primary btn7" ui-sref="editGroup({groupId: group._id})" ng-show="currentUser._id === group.creator"><h3>Add Members To Group</h3></button>
 </div>
 
 

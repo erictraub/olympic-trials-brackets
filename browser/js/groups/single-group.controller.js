@@ -1,9 +1,19 @@
 app.controller('SingleGroupCtrl', function($scope, group, currentUser, $state, menPredictions, womenPredictions) {
 	$scope.group = group;
 	$scope.currentUser = currentUser;
-	$scope.predictions = menPredictions;
-	$scope.showMen = true;
-	$scope.showWomen = false;
+
+	if (menPredictions.length) {
+		$scope.predictions = menPredictions;
+		$scope.showMen = true;
+		$scope.showWomen = false;
+	} else {
+		$scope.predictions = womenPredictions;
+		$scope.showMen = false;
+		$scope.showWomen = true;
+	}
+
+	// $scope.showMen = true;
+	// $scope.showWomen = false;
 
 	$scope.predictionMade = false;
 
