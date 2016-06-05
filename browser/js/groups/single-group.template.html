@@ -9,13 +9,13 @@
 
 <div class="row" style="margin-bottom: 30px;">
   <div class="col-md-6 col-md-offset-3" style="text-align:center;">
-    <button type="button" class="btn btn-default shadow1 btn8" ui-sref="createPredictions({ groupId: group._id, userId: currentUser._id })" ng-show="predictionMade"><h5><strong>Edit My Predictions</strong></h5></button>
-    <button type="button" class="btn btn-default shadow1" ui-sref="createPredictions({ groupId: group._id, userId: currentUser._id })" ng-hide="predictionMade"><h5><strong>Create Predictions</strong></h5></button>
+    <button type="button" class="btn btn-default shadow1 btn8" ui-sref="createPredictions({ groupId: group._id, userId: currentUser._id })" ng-show="predictionMade && predictions.length"><h5><strong>Edit My Predictions</strong></h5></button>
+    <button type="button" class="btn btn-default shadow1" ui-sref="createPredictions({ groupId: group._id, userId: currentUser._id })" ng-show="!predictionMade && predictions.length"><h5><strong>Create Predictions</strong></h5></button>
   </div>
 </div>
 
 
-<div class="row" style="margin-bottom: 20px;" ng-show="predictions.length">
+<div class="row" style="margin-bottom: 20px;">
   <div class="col-md-6 col-md-offset-3" style="text-align:center;">
     <button type="button" class="btn btn-primary btn6" ng-click="showMenBracket()"><strong>Men's Bracket</strong></button>
     <button type="button" class="btn btn-primary btn6" ng-click="showWomenBracket()"><strong>Women's Bracket</strong></button>
@@ -413,6 +413,11 @@
 </div> -->
 
 <div class="col-md-6 col-md-offset-3" style="text-align:center;margin-bottom: 90px;">
+  <h3 ng-show="!predictions.length && showMen" style="margin-bottom: 30px;margin-top: 70px;"><i>Currently no men's predictions...</i></h3>
+  <h3 ng-show="!predictions.length && showWomen" style="margin-bottom: 30px;margin-top: 70px;"><i>Currently no women's predictions...</i></h3>
+  <button ng-show="!predictions.length && showMen" type="button" class="btn btn-default shadow1" ui-sref="createPredictions({ groupId: group._id, userId: currentUser._id })" style="margin-bottom: 150px;"><h4><strong>Create Predictions!</strong></h4></button>
+  <button ng-show="!predictions.length && showWomen" type="button" class="btn btn-default shadow1" ui-sref="createPredictions({ groupId: group._id, userId: currentUser._id })" style="margin-bottom: 150px;"><h4><strong>Create Predictions!</strong></h4></button>
+  <br>
   <button type="button" class="btn btn-primary btn7" ui-sref="editGroup({groupId: group._id})" ng-show="currentUser._id === group.creator"><h3>Add Members To Group</h3></button>
 </div>
 

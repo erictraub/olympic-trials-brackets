@@ -52,7 +52,7 @@
 
 
 
-  <div class="col-md-3">
+  <div class="col-md-3 col-xs-8 col-sm-8">
     <form>
 
       <fieldset class="form-group">
@@ -124,7 +124,8 @@
       </fieldset>
 
       <fieldset class="form-group">
-        <label>1500 Freestyle</label>
+        <label ng-show="showMen">1500 Freestyle</label>
+        <label ng-show="showWomen">800 Freestyle</label>
         <input type="text" class="form-control mgnBtm" ng-model="prediction.free1500[0]"placeholder="1st qualifier" maxlength="20">
         <input type="text" class="form-control mgnBtm" ng-model="prediction.free1500[1]"placeholder="2nd qualifier" maxlength="20">
       </fieldset>
@@ -149,7 +150,7 @@
 
   <!-- FOR TIMES -->
 
-  <div class="col-md-1">
+  <div class="col-md-1 col-xs-2 col-sm-2">
     <form>
 
       <fieldset class="form-group">
