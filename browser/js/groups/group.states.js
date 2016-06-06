@@ -67,3 +67,19 @@ app.config(function ($stateProvider) {
         }
     });
 });
+
+app.config(function ($stateProvider) {
+    $stateProvider.state('joinAGroup', {
+        url: '/joinGroup',
+        templateUrl: 'js/groups/join-a-group.template.html',
+        controller: 'JoinAGroupCtrl',
+        resolve: {
+            currentUser: function(AuthService) {
+                return AuthService.getLoggedInUser();
+            },
+            userGroups: function(GroupFactory, currentUser) {
+                return GroupFactory.fetchAllForUser(currentUser._id);
+            }
+        }
+    });
+});

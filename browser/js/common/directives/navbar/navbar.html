@@ -11,16 +11,16 @@
                 <a ui-sref-active="active" ui-sref="home"><h4 style="color: #1F2F82">Home</h4></a>
             </li> -->
             <li ng-if="user">
-                <a ui-sref-active="active" ui-sref="landing"><h4 style="color: #1F2F82">Home</h4></a>
+                <a ui-sref-active="active" ui-sref="landing"><h4 class="hvr2"style="color: #1F2F82">Home</h4></a>
             </li>
             <li ng-if="user">
-                <a ui-sref-active="active" ui-sref="createGroup"><h4 style="color: #1F2F82">Create Group</h4></a>
+                <a ui-sref-active="active" ui-sref="createGroup"><h4 class="hvr2"style="color: #1F2F82">Create Group</h4></a>
             </li>
             <li ng-if="user">
-                <a ui-sref-active="active" ui-sref="groupList"><h4 style="color: #1F2F82">My Groups</h4></a>
+                <a ui-sref-active="active" ui-sref="joinAGroup"><h4 class="hvr2"style="color: #1F2F82">Search Groups</h4></a>
             </li>
             <li ng-if="user">
-                <a ui-sref-active="active" ui-sref="contactUs"><h4 style="color: #1F2F82">Contact Us</h4></a>
+                <a ui-sref-active="active" ui-sref="groupList"><h4 class="hvr2"style="color: #1F2F82">My Groups</h4></a>
             </li>
         </ul>
         <button ng-show="user && user.isAdmin" ui-sref="admin" class="btn login-button suli"><strong>Admin</strong></button>
@@ -28,7 +28,8 @@
         <button ng-show="!user" ui-sref="login" class="btn login-button suli" style="margin-right:10px;"><strong>
         Login</strong></button>
         <div ng-show="user" class="welcome" style="margin-top: 20px;">
-            <span style="margin-right:35px;color: rgba(0, 0, 0, 0.57);"><strong>Welcome, {{ user.username }}!</strong></span>
+            <!-- <span style="margin-right:35px;color: rgba(0, 0, 0, 0.57);"><strong>Welcome, {{ user.username }}!</strong></span> -->
+            <span style="margin-right:35px;color: #1F2F82" class="hvr2" ui-sref="contactUs">Contact us</span>
             <a id="lgout" ng-click="logout()" style="background-color: #A7A3A3; border-radius: 5px;padding: 6px;color: #404C8A;text-decoration: none;"><strong>Logout</strong></a>
         </div>
     </div>

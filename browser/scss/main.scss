@@ -105,7 +105,7 @@ table {
   background-color: #3C66AB;
   border-radius: 12px;
   text-align: center;
-  height: 240px;
+  height: 230px;
   border: none;
   box-shadow: 10px 10px 25px 0px rgba(0,0,0,0.67);
 }
@@ -326,6 +326,14 @@ button:hover {
   font-size: 50px;
 }
 
+.rd1 {
+  color: #F58787;
+}
+
+.hvr2:hover {
+  color: red !important;
+  cursor: pointer;
+}
 
 
 

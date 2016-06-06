@@ -22,5 +22,12 @@ app.factory('UserFactory', function($http) {
 		});
 	};
 
+	UserFactory.getByEmail = function(userEmail) {
+		return $http.get('/api/users'  + '?email=' + userEmail)
+		.then(function(user) {
+			return user.data;
+		});
+	};
+
 	return UserFactory;
 });

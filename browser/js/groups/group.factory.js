@@ -21,7 +21,6 @@ app.factory('GroupFactory', function($http) {
 	GroupFactory.addMemberToGroup = function(userEmail, groupId) {
 		return $http.put('/api/groups/' + groupId + '/members', { userEmail: userEmail })
 		.then(function(addedUser) {
-			console.log('addedUser', addedUser)
 			var present = false;
 
 			for (var i = 0; i < cachedMembers.length; i++) {
@@ -38,6 +37,23 @@ app.factory('GroupFactory', function($http) {
 			}
 		});
 	};
+
+	GroupFactory.addMemberToG = function(userEmail, groupId) {
+		return $http.put('/api/groups/' + groupId + '/members', { userEmail: userEmail })
+		.then(function(addedUser) {
+
+			if (addedUser.data === 'user not found') {
+				return 'user not found';
+			} else {
+				return 'member added to group';
+			}
+		});
+	};
+
+
+
+
+
 
 	GroupFactory.fetchAllMembers = function(groupId) {
 		return $http.get('/api/groups/' + groupId + '/members')
@@ -62,6 +78,16 @@ app.factory('GroupFactory', function($http) {
 		});
 	};
 
+	GroupFactory.fetchAllForCreator = function(userId) {
+		return $http.get('/api/groups' + '?creator=' + userId)
+		.then(function(groups) {
+			return groups.data;
+		});
+	};
+
 
 	return GroupFactory;
 });
+
+
+

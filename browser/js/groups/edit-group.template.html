@@ -1,6 +1,6 @@
 <div style="min-height: 60px;"></div>
 
-<div class="row" style="margin-bottom:60px;">
+<div class="row" style="margin-bottom:30px;">
 	<div clsss="col-md-12" style="text-align:center;">
 		<h1 style="color: #1F2F82;font-size: 50px;">{{ group.name }}</h1>
 		<button type="submit" class="btn btn-default btn3 shadow1" ui-sref="singleGroup({ groupId: group._id })" style="background-color: white;color: #1F2F82"><strong>View Group Brackets</strong></button>
@@ -8,11 +8,29 @@
 </div>
 
 
+
 <div class="row">
+	<div class="col-md-6 col-md-offset-3" style="text-align: center;">
+		<div class="col-md-12" style="background-color: #4CC363;border-radius:10px; color: white;">
+			<h2><strong>Tell your friends to sign up</strong></h2>
+			<h4>and search for your group on the 'Search Groups' page</h4>
+			<h4 style="margin-bottom: 25px;">(they will need your email address to search you by)</h4>
+		</div>
+
+		<div class="col-md-12" style="margin-bottom: 15px;margin-top: 15px;color: #0A1E4E;">
+			<h3>or</h3>
+		</div>
+	</div>
+</div>
+
+
+<div class="row" style="margin-bottom: 300px;">
 	<div class="col-md-2"></div>
 
 	<div class="col-md-4" style="text-align:center;">
-		<h3>Add Members to Group</h3>
+
+		<h3 style="color: #0A1E4E;">Add Members to Group</h3>
+		<h5 style="color: #0A1E4E;">if they already have an account</h5>
 		<form name="addUser">
 		    <div class="form-group">
 		        <input type="text" ng-model="searchedEmail" class="form-control" placeholder="search by email">
@@ -45,7 +63,7 @@
 	</div>
 
 	<div class="col-md-4 rnd">
-		<h3>Current Members</h3>
+		<h3 style="color: #0A1E4E;">Current Members</h3>
 		<table class='table table-striped shadow2' ng-show="true" style="color: background-color:rgb(31, 47, 130);color: rgb(31, 47, 130);">
 		  <thead style="background-color:rgb(31, 47, 130);color: white;">
 		    <tr>
