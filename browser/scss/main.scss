@@ -40,12 +40,14 @@ td, th {
 
 .h57 {
   height: 57px !important;
-  min-width: 220px;
+  min-width: 240px;
+  border-right: 1px solid red;
 }
 
 .h137 {
   height: 137px !important;
-  min-width: 230px;
+  min-width: 240px;
+  border-right: 1px solid red;
 }
 
 .ctr {
@@ -200,6 +202,10 @@ button:hover {
   background-color: #A2ACB3;
   color: white;
   font-size: 30px;
+}
+
+.btn11:hover {
+  background-color: #EF3131 !important;
 }
 
 .wpic {
