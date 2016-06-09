@@ -18,6 +18,7 @@ app.controller('AdminCtrl', function($scope, GroupFactory, PredictionFactory, Us
 		UserFactory.getAllUsers()
 		.then(function(users) {
 			$scope.allUsers = users;
+			console.log('All users: ', $scope.allUsers);
 		});
 	};
 

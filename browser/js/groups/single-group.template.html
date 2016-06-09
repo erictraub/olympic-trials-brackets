@@ -12,7 +12,7 @@
     <button type="button" class="btn btn-default shadow1 btn8" ui-sref="editGroup({groupId: group._id})" ng-show="currentUser._id === group.creator && !empty && showMen && predictions.length" style="color: #1F2F82;"><h5><strong>Add Members To Group</strong></h5></button>
     <button type="button" class="btn btn-default shadow1 btn8" ui-sref="editGroup({groupId: group._id})" ng-show="currentUser._id === group.creator && !empty && showWomen && predictions.length" style="color: #1F2F82;"><h5><strong>Add Members To Group</strong></h5></button>
     <button type="button" class="btn btn-default shadow1 btn8 btn11" ui-sref="createPredictions({ groupId: group._id, userId: currentUser._id })" ng-show="predictionMade && predictions.length" style="color: white;background-color: #FF5252"><h5><strong>Edit My Predictions</strong></h5></button>
-    <button type="button" class="btn btn-default shadow1" ui-sref="createPredictions({ groupId: group._id, userId: currentUser._id })" ng-show="!predictionMade && predictions.length"><h5><strong>Create Predictions</strong></h5></button>
+    <button type="button" class="btn btn-default shadow1" ui-sref="createPredictions({ groupId: group._id, userId: currentUser._id })" ng-show="!predictionMade && predictions.length" style="color: white;background-color: #FF5252"><h5><strong>Create Predictions</strong></h5></button>
   </div>
 </div>
 
