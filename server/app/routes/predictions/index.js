@@ -26,7 +26,7 @@ router.post('/', function(req, res, next) {
 		}
 	})
 	.then(function(prediction) {
-		res.send(prediction);
+		res.status(201).send(prediction);
 	})
 	.catch(next);
 });
